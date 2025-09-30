@@ -42,14 +42,15 @@ Create folder named 'DeepGlobe', its structure is
       ├── test
 ```
 ### test
-Please download our pre-trained model [here]().
+Please download our pre-trained model:  
+Baidu Netdisk: https://pan.baidu.com/s/1BllXL6E8B9r7zl77VipcvQ?pwd=651v  Extraction Code: 651v
 ```
 python ./test.py configs/swin/swin_tiny_p4w7_1024x1024_160k_city_pretrain_224x224_1K.py city.pth --eval mIoU
 python ./test.py configs/swin/swin_tiny_p4w7_1024x1024_80k_IA_pretrain_224x224_1K.py ia.pth --eval mIoU
 python ./test.py configs/swin/swin_tiny_p4w7_768x768_80k_deepglobe_pretrain_224x224_1K.py deepglobe.pth --eval mIoU
 ```
 ### train
-Please download [Swin Transformer]() and  [EfficientViT-B2](https://github.com/mit-han-lab/efficientvit/blob/master/applications/efficientvit_cls/README.md#pretrained-efficientvit-classification-models) pre-trianed model.
+Please download [Swin Transformer](https://download.openmmlab.com/mmsegmentation/v0.5/pretrain/swin/swin_tiny_patch4_window7_224_20220317-1cdeb081.pth) and  [EfficientViT-B2](https://github.com/mit-han-lab/efficientvit/blob/master/applications/efficientvit_cls/README.md#pretrained-efficientvit-classification-models) pre-trianed model.
 ```
 python ./train.py configs/swin/swin_tiny_p4w7_1024x1024_160k_city_pretrain_224x224_1K.py
 python ./train.py configs/swin/swin_tiny_p4w7_1024x1024_80k_IA_pretrain_224x224_1K.py
