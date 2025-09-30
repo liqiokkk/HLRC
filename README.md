@@ -7,8 +7,8 @@ In ultra-high resolution image segmentation task for robotic platforms like UAVs
 ## Test and train
 python==3.7, pytorch==1.10.0, and mmcv==1.7.0 
 ### dataset
-Please download [Cityscapes](https://www.cityscapes-dataset.com/).
-Please register and download [Inria Aerial](https://project.inria.fr/aerialimagelabeling/) dataset and [DeepGlobe](https://competitions.codalab.org/competitions/18468) dataset, we follow [FCtL](https://github.com/liqiokkk/FCtL) to split two datasets. 
+Please download [Cityscapes](https://www.cityscapes-dataset.com/) dataset.  
+Please download [Inria Aerial](https://project.inria.fr/aerialimagelabeling/) dataset and [DeepGlobe](https://competitions.codalab.org/competitions/18468) dataset, we follow [FCtL](https://github.com/liqiokkk/FCtL) to split two datasets.  
 Create folder named 'InriaAerial', its structure is 
 ```
     InriaAerial/
@@ -42,18 +42,18 @@ Create folder named 'DeepGlobe', its structure is
       ├── test
 ```
 ### test
-Please download our pretrianed-model [here]().
+Please download our pre-trained model [here]().
 ```
-python ./test.py configs/swin/swin_tiny_p4w7_768x768_80k_deepglobe_pretrain_224x224_1K.py deepglobe.pth --eval mIoU
-python ./test.py configs/swin/swin_tiny_p4w7_1024x1024_80k_IA_pretrain_224x224_1K.py ia.pth --eval mIoU
 python ./test.py configs/swin/swin_tiny_p4w7_1024x1024_160k_city_pretrain_224x224_1K.py city.pth --eval mIoU
+python ./test.py configs/swin/swin_tiny_p4w7_1024x1024_80k_IA_pretrain_224x224_1K.py ia.pth --eval mIoU
+python ./test.py configs/swin/swin_tiny_p4w7_768x768_80k_deepglobe_pretrain_224x224_1K.py deepglobe.pth --eval mIoU
 ```
 ### train
-Please download [Swin Transformer]() and  [EfficientViT-B2](https://github.com/mit-han-lab/efficientvit/blob/master/applications/efficientvit_cls/README.md#pretrained-efficientvit-classification-models) pretrianed-model.
+Please download [Swin Transformer]() and  [EfficientViT-B2](https://github.com/mit-han-lab/efficientvit/blob/master/applications/efficientvit_cls/README.md#pretrained-efficientvit-classification-models) pre-trianed model.
 ```
-python ./train.py configs/swin/swin_tiny_p4w7_768x768_80k_deepglobe_pretrain_224x224_1K.py
-python ./train.py configs/swin/swin_tiny_p4w7_1024x1024_80k_IA_pretrain_224x224_1K.py
 python ./train.py configs/swin/swin_tiny_p4w7_1024x1024_160k_city_pretrain_224x224_1K.py
+python ./train.py configs/swin/swin_tiny_p4w7_1024x1024_80k_IA_pretrain_224x224_1K.py
+python ./train.py configs/swin/swin_tiny_p4w7_768x768_80k_deepglobe_pretrain_224x224_1K.py
 ```
 ## Citation
 If you use this code or our results for your research, please cite our papers.
